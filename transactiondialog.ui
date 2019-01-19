@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TransactionDialog</class>
+ <widget class="QDialog" name="TransactionDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>812</width>
+    <height>529</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>13</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Transaction Edit</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QLabel" name="textLabel1">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>&lt;font face=&quot;Arial&quot;&gt;&lt;font size=&quot;+3&quot;&gt;&lt;font face=&quot;Arial&quot;&gt;Transaction Edit&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="layoutWidget">
+      <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0,0,0,0,0,0,0,0,0,0,0,0">
+       <item row="4" column="0">
+        <widget class="QLabel" name="tranEditBuyer">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>Buyer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="tranEditBPen">
+         <property name="text">
+          <string>Buyer Pen</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="4">
+        <widget class="QLabel" name="transeditAvgWt">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QLineEdit" name="transeditBuyer"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="tranEditHead">
+         <property name="text">
+          <string>Head</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="transeditHead"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="tranEditWeight">
+         <property name="text">
+          <string>Weight</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1" colspan="2">
+        <widget class="QLineEdit" name="transeditBPen"/>
+       </item>
+       <item row="6" column="1" colspan="2">
+        <widget class="QLineEdit" name="transeditWeight"/>
+       </item>
+       <item row="6" column="3">
+        <widget class="QLabel" name="averageLabel">
+         <property name="text">
+          <string>Avg.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="2" colspan="4">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="videoPushButton">
+           <property name="text">
+            <string>Video</string>
+           </property>
+           <property name="shortcut">
+            <string/>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="printTicketButton">
+           <property name="text">
+            <string>Print</string>
+           </property>
+           <property name="shortcut">
+            <string/>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cancelTransaction">
+           <property name="text">
+            <string>Cancel</string>
+           </property>
+           <property name="shortcut">
+            <string/>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttSaveTransaction">
+           <property name="text">
+            <string>Save</string>
+           </property>
+           <property name="shortcut">
+            <string/>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="tranEditDesc">
+         <property name="text">
+          <string>Description</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1" colspan="2">
+        <widget class="QLineEdit" name="transeditDesc">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>32767</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight</set>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="3" colspan="2">
+        <widget class="QLabel" name="transedTextDesc">
+         <property name="text">
+          <string>Description Text</string>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="tranEditBid">
+         <property name="text">
+          <string>Bid</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1" colspan="2">
+        <widget class="QLineEdit" name="transeditBid">
+         <property name="alignment">
+          <set>Qt::AlignRight</set>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="tranEditMode">
+         <property name="text">
+          <string>Mode</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1" colspan="2">
+        <widget class="QSpinBox" name="modeSpinBox">
+         <property name="maximum">
+          <number>8</number>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="3" colspan="2">
+        <widget class="QComboBox" name="transeditMode">
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContents</enum>
+         </property>
+         <item>
+          <property name="text">
+           <string>Invalid</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sale/CWT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sale/Head</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NoSale/CWT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NoSale/Head</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Resale/CWT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Resale/Head</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Buyer Swap/CWT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Buyer Swap/Head</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0" rowspan="2">
+        <widget class="QLabel" name="tranEditSeller">
+         <property name="text">
+          <string>Seller</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" rowspan="2" colspan="2">
+        <widget class="QLabel" name="transeditNumber">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="5">
+        <widget class="QPushButton" name="deleteTagButton">
+         <property name="text">
+          <string>Delete Tags</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QLabel" name="averageLabel_2">
+         <property name="text">
+          <string>Tags</string>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3" rowspan="2" colspan="2">
+        <widget class="QLabel" name="manLabel">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="5" rowspan="2">
+        <widget class="QLineEdit" name="tagEdit"/>
+       </item>
+       <item row="3" column="5" rowspan="7">
+        <widget class="Q3ListBox" name="tagListBox">
+         <property name="selectionMode">
+          <enum>Q3ListBox::Multi</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1" colspan="2">
+        <widget class="QLineEdit" name="transeditSPen"/>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="tranEditSPen">
+         <property name="text">
+          <string>Seller Pen</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="tranEditBPen_2">
+         <property name="text">
+          <string>Comment</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1" colspan="4">
+        <widget class="QLineEdit" name="transeditComment"/>
+       </item>
+       <item row="2" column="1" rowspan="2" colspan="2">
+        <widget class="QLineEdit" name="transeditSeller">
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="2">
+        <widget class="QLabel" name="editNumberLabel">
+         <property name="text">
+          <string>Number</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="videoWidget" native="true"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>Q3Frame</class>
+   <extends>QFrame</extends>
+   <header>Qt3Support/Q3Frame</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3ListBox</class>
+   <extends>Q3Frame</extends>
+   <header>q3listbox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>transeditSeller</tabstop>
+  <tabstop>transeditBuyer</tabstop>
+  <tabstop>transeditHead</tabstop>
+  <tabstop>transeditWeight</tabstop>
+  <tabstop>transeditDesc</tabstop>
+  <tabstop>transeditBid</tabstop>
+  <tabstop>modeSpinBox</tabstop>
+  <tabstop>transeditSPen</tabstop>
+  <tabstop>transeditBPen</tabstop>
+  <tabstop>transeditComment</tabstop>
+  <tabstop>buttSaveTransaction</tabstop>
+  <tabstop>cancelTransaction</tabstop>
+  <tabstop>transeditMode</tabstop>
+ </tabstops>
+ <includes>
+  <include location="local">types/transaction.h</include>
+  <include location="local">dao/setupdao.h</include>
+  <include location="local">dao/printerdao.h</include>
+  <include location="local">dao/salemanager.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>

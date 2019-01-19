@@ -1,0 +1,56 @@
+#!/bin/sh
+#
+# Get last revision (counting commits) on src dir, to simulate subversion revisions.
+
+
+usage()
+{
+    echo "Usage: $(basename $0) /path/to/git/source"
+    echo "   "
+    exit 1
+}
+
+#
+# User must pass subdir to git-controlled code.
+# If no command line parms, show help screen and bail out
+#
+if (($# == 0)); then
+    usage
+fi
+
+DESTDIR=$1
+
+# echo "DESTDIR = $DESTDIR"
+pushd $DESTDIR 2>&1 > /dev/null
+
+c=`git rev-list --full-history --all --abbrev-commit | wc -l | sed -e 's/^ *//'`
+h=`git rev-list --full-history --all --abbrev-commit | head -1`
+detachedHead=`git branch | grep "HEAD" | sed 's/)//' | awk '{print $5}'`
+
+DateTime=`date "+%Y-%m-%d %H:%M"`
+
+echo "Latest commit=$c"
+echo "detachedHead=$detachedHead"
+
+if [ -n "$detachedHead" ]; then
+	NEW_VERSION=$detachedHead
+else
+	NEW_VERSION=$c
+fi
+
+echo "NEW_VERSION=$NEW_VERSION"
+
+NEW_REVISION="#define GIT_REVISION \"${NEW_VERSION}\""
+OLD_REVISION=`cat git_revision.h 2> /dev/null`
+
+# Update version.h only on revision changes to avoid spurious rebuilds
+if test "$NEW_REVISION" != "$OLD_REVISION"; then
+    echo "Updating git_revision.h!" > /tmp/status-git
+    echo "$NEW_REVISION" > git_revision.h
+    echo "SVN-r${NEW_VERSION}" >> /tmp/status-git
+else
+     echo "No update needed on git_revision.h!" > /tmp/status-git
+fi
+
+popd 2>&1 > /dev/null
+

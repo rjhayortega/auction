@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+
+usage()
+{
+    echo "Usage: $(basename $0) /path/to/git/source [revision-to-find]"
+    echo "   "
+    exit 1
+}
+
+#
+# User must pass subdir to git-controlled code.
+# If no command line parms, show help screen and bail out
+#
+if (($# == 0)); then
+    usage
+fi
+
+DESTDIR=$1
+
+# echo "DESTDIR = $DESTDIR"
+pushd $DESTDIR 2>&1 > /dev/null
+
+
+#DateTime=`date "+%Y-%m-%d %H:%M"`
+#echo "DateTime=$DateTime"
+
+totalCommits=`git rev-list --full-history --all --abbrev-commit | wc -l | sed -e 's/^ *//'`
+shaHash=`git rev-list --full-history --all --abbrev-commit | head -1`
+allCommits=`git rev-list --tags --all --reverse | awk '{ print FNR "\t" $0 }'`
+allLogs=`git log --all --reverse --abbrev-commit --pretty=oneline | awk '{ print FNR "\t" $0 }'`
+detachedHead=`git branch | grep "HEAD" | sed 's/)//' | awk '{print $5}'`
+
+echo "CurrentRevision=$totalCommits"
+echo "CommitHash=$shaHash"
+# echo -e "allCommits=\n$allCommits"
+# echo -e "allLogs=\n$allLogs"
+echo -e "detachedHead=$detachedHead"
+
+echo "$allCommits" > /tmp/gitCommits.txt
+echo "$allLogs" > /tmp/gitLogs.txt
+
+rev=$2
+if [ -n "$rev" ]; then
+    cat /tmp/gitLogs.txt | awk 'NR=='"$rev"' { print; exit }'
+fi
+
+popd 2>&1 > /dev/null
+

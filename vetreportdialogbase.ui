@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VetReportDialogBase</class>
+ <widget class="QDialog" name="VetReportDialogBase">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>762</width>
+    <height>556</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Bitstream Vera Sans Mono</family>
+    <pointsize>13</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Vet Report Dialog Base</string>
+  </property>
+  <layout class="QGridLayout">
+   <item row="5" column="16">
+    <widget class="QPushButton" name="printButton">
+     <property name="text">
+      <string>Print</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="8" colspan="2">
+    <widget class="QLabel" name="footerRowDisplay">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="10">
+    <widget class="QLabel" name="textLabel2_2_2">
+     <property name="text">
+      <string>Col:</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="6" colspan="2">
+    <widget class="QLabel" name="textLabel2_3">
+     <property name="text">
+      <string>Row:</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="6">
+    <widget class="QLabel" name="footerLabel">
+     <property name="text">
+      <string>Footer</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="11">
+    <widget class="QLabel" name="footerColDisplay">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="12" colspan="5">
+    <spacer name="spacer4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>281</width>
+       <height>21</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="0" colspan="11">
+    <widget class="Q3GroupBox" name="rangeGroup">
+     <property name="title">
+      <string>Range</string>
+     </property>
+     <layout class="QGridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="textLabel4">
+        <property name="text">
+         <string>First</string>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="firstRecordComboBox"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="textLabel5">
+        <property name="text">
+         <string>Last</string>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="lastRecordComboBox"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="indexLabel">
+     <property name="text">
+      <string>Index</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" colspan="5">
+    <widget class="QComboBox" name="indexComboBox">
+     <item>
+      <property name="text">
+       <string>Record Number</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Age</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Allflex</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Breed</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="6" colspan="3">
+    <widget class="QLabel" name="showLabel">
+     <property name="text">
+      <string>Show</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="9" colspan="5">
+    <widget class="QComboBox" name="showComboBox">
+     <item>
+      <property name="text">
+       <string>All</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Deleted</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Non-Deleted</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="14" colspan="2">
+    <widget class="QPushButton" name="cancelButton">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="17">
+    <widget class="Q3TextEdit" name="footerEdit">
+     <property name="font">
+      <font>
+       <family>Bitstream Vera Sans Mono</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="wordWrap">
+      <enum>Q3TextEdit::NoWrap</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="17">
+    <widget class="Q3TextEdit" name="headerEdit">
+     <property name="font">
+      <font>
+       <family>Bitstream Vera Sans Mono</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="wordWrap">
+      <enum>Q3TextEdit::NoWrap</enum>
+     </property>
+     <property name="overwriteMode">
+      <bool>false</bool>
+     </property>
+     <property name="autoFormatting">
+      <set>Q3TextEdit::AutoAll</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>Header</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="textLabel2">
+     <property name="text">
+      <string>Row:</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QLabel" name="headerRowDisplay">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QLabel" name="textLabel2_2">
+     <property name="text">
+      <string>Col:</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5" colspan="2">
+    <widget class="QLabel" name="headerColDisplay">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7" colspan="6">
+    <widget class="QLabel" name="textLabel1">
+     <property name="text">
+      <string>Height of form (in lines)</string>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="13" colspan="2">
+    <widget class="QSpinBox" name="heightSpinBox">
+     <property name="value">
+      <number>48</number>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="15" colspan="2">
+    <widget class="QComboBox" name="importRecordComboBox">
+     <item>
+      <property name="text">
+       <string>Import Daily Buyer</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Import Perm Buyer</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>Q3GroupBox</class>
+   <extends>QGroupBox</extends>
+   <header>Qt3Support/Q3GroupBox</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3Frame</class>
+   <extends>QFrame</extends>
+   <header>Qt3Support/Q3Frame</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3TextEdit</class>
+   <extends>Q3Frame</extends>
+   <header>q3textedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <includes>
+  <include location="local">lineprinter.h</include>
+  <include location="global">string</include>
+  <include location="global">vector</include>
+  <include location="local">types/tag.h</include>
+  <include location="local">dao/tagdao.h</include>
+  <include location="local">dao/setupdao.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>

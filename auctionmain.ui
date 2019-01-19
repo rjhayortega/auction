@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AuctionMain</class>
+ <widget class="QMainWindow" name="AuctionMain">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>706</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>13</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Sale Day Auction Market System By Digital Development</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="widget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Open Sales</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_3">
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::ExpandingFieldsGrow</enum>
+           </property>
+           <item row="0" column="0">
+            <layout class="QFormLayout" name="formLayout_2">
+             <item row="0" column="0">
+              <widget class="QLabel" name="saleDayLabel">
+               <property name="text">
+                <string>This Session:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="currentDateDisplay">
+               <property name="text">
+                <string>00/00/0000</string>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="saleDayLabel_2">
+               <property name="text">
+                <string>Active(Clerk):</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="activeDateDisplay">
+               <property name="text">
+                <string>00/00/0000</string>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="textLabel2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Copyright 2006 - 2019 by Sargent Communications,Inc.
+310 North Center Avenue, Hardin, MT. 59034
+(406) 665-3348 - Version 7.0</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="statGroup">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Est. End Time: 00:00:00</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Head In</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLabel" name="statHeadCheckedIn">
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Head Sold</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QLabel" name="statHeadSold">
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="groupBox_7">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Head / Hr</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="statHeadPerHour">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>0.0.0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="groupBox_11">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Percent Sold</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="statPercentSold">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="text">
+                 <string>0.00</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="statusLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="MenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>706</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="Perm_FM">
+    <property name="title">
+     <string>&amp;Perm</string>
+    </property>
+    <addaction name="PermAction"/>
+   </widget>
+   <widget class="QMenu" name="Daily_FM">
+    <property name="title">
+     <string>&amp;Daily FM</string>
+    </property>
+    <addaction name="DailyAction"/>
+   </widget>
+   <widget class="QMenu" name="InvoiceMenuItem">
+    <property name="title">
+     <string>&amp;Invoice</string>
+    </property>
+    <addaction name="startInvoiceAction"/>
+   </widget>
+   <widget class="QMenu" name="HistoryMenuItem">
+    <property name="title">
+     <string>&amp;History</string>
+    </property>
+    <addaction name="startHistoryAction"/>
+   </widget>
+   <widget class="QMenu" name="Reports">
+    <property name="title">
+     <string>&amp;Reports</string>
+    </property>
+    <addaction name="Summary"/>
+    <addaction name="DetailedSummaryAction"/>
+    <addaction name="DiscrepancyReportAction"/>
+    <addaction name="MarketReportAction"/>
+    <addaction name="TagReportAction"/>
+    <addaction name="PenReportAction"/>
+    <addaction name="BuyerARAction"/>
+    <addaction name="TruckerChecksAction"/>
+    <addaction name="BuyerChecksAction"/>
+    <addaction name="TransferCheckAction"/>
+    <addaction name="BuyerListAction"/>
+    <addaction name="TruckerReportAction"/>
+    <addaction name="BuyerCountAction"/>
+   </widget>
+   <widget class="QMenu" name="UtilitiesMenuItem">
+    <property name="title">
+     <string>&amp;Utilities</string>
+    </property>
+    <addaction name="TransEditAction"/>
+    <addaction name="CheckEditAction"/>
+    <addaction name="SaleManagerAction"/>
+    <addaction name="SetupAction"/>
+    <addaction name="ToggleSQLDebugAction"/>
+    <addaction name="BackupAction"/>
+    <addaction name="RestoreAction"/>
+    <addaction name="BrandEditAction"/>
+    <addaction name="BrowseTagsAction"/>
+    <addaction name="RepairAction"/>
+    <addaction name="ImportLienAction"/>
+    <addaction name="separator"/>
+    <addaction name="VetDialogAction"/>
+   </widget>
+   <addaction name="Perm_FM"/>
+   <addaction name="Daily_FM"/>
+   <addaction name="InvoiceMenuItem"/>
+   <addaction name="HistoryMenuItem"/>
+   <addaction name="Reports"/>
+   <addaction name="UtilitiesMenuItem"/>
+  </widget>
+  <action name="DailyAction">
+   <property name="iconText">
+    <string>Start Daily</string>
+   </property>
+   <property name="shortcut">
+    <string>D</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>DailyAction</cstring>
+   </property>
+  </action>
+  <action name="PermAction">
+   <property name="iconText">
+    <string>Start Perm</string>
+   </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>PermAction</cstring>
+   </property>
+  </action>
+  <action name="startInvoiceAction">
+   <property name="iconText">
+    <string>Start Invoice</string>
+   </property>
+   <property name="shortcut">
+    <string>I</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>startInvoiceAction</cstring>
+   </property>
+  </action>
+  <action name="SetupAction">
+   <property name="iconText">
+    <string>Setup</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>SetupAction</cstring>
+   </property>
+  </action>
+  <action name="TransEditAction">
+   <property name="iconText">
+    <string>Trans Edit</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>TransEditAction</cstring>
+   </property>
+  </action>
+  <action name="ToggleSQLDebugAction">
+   <property name="iconText">
+    <string>Toggle Debug</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>ToggleSQLDebugAction</cstring>
+   </property>
+  </action>
+  <action name="CheckEditAction">
+   <property name="iconText">
+    <string>Check Register</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>CheckEditAction</cstring>
+   </property>
+  </action>
+  <action name="Summary">
+   <property name="iconText">
+    <string>Summary</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>Summary</cstring>
+   </property>
+  </action>
+  <action name="DiscrepancyReportAction">
+   <property name="iconText">
+    <string>Discrepancy Report</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>DiscrepancyReportAction</cstring>
+   </property>
+  </action>
+  <action name="daily_fmfAction">
+   <property name="text">
+    <string>f</string>
+   </property>
+   <property name="iconText">
+    <string>f</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>daily_fmfAction</cstring>
+   </property>
+  </action>
+  <action name="SaleManagerAction">
+   <property name="iconText">
+    <string>Sale Manager</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>SaleManagerAction</cstring>
+   </property>
+  </action>
+  <action name="MarketReportAction">
+   <property name="iconText">
+    <string>Market Report</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>MarketReportAction</cstring>
+   </property>
+  </action>
+  <action name="TagReportAction">
+   <property name="iconText">
+    <string>Tag Report</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>TagReportAction</cstring>
+   </property>
+  </action>
+  <action name="PenReportAction">
+   <property name="iconText">
+    <string>Pen Report</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>PenReportAction</cstring>
+   </property>
+  </action>
+  <action name="ImportLienAction">
+   <property name="iconText">
+    <string>Import Liens</string>
+   </property>
+   <property name="toolTip">
+    <string>Import Liens</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>ImportLienAction</cstring>
+   </property>
+  </action>
+  <action name="BuyerARAction">
+   <property name="iconText">
+    <string>Buyer AR</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>BuyerARAction</cstring>
+   </property>
+  </action>
+  <action name="TruckerChecksAction">
+   <property name="iconText">
+    <string>Trucker Checks</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>TruckerChecksAction</cstring>
+   </property>
+  </action>
+  <action name="BuyerChecksAction">
+   <property name="iconText">
+    <string>Buyer Checks</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>BuyerChecksAction</cstring>
+   </property>
+  </action>
+  <action name="BackupAction">
+   <property name="iconText">
+    <string>Backup</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>BackupAction</cstring>
+   </property>
+  </action>
+  <action name="RestoreAction">
+   <property name="iconText">
+    <string>Restore/Update</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>RestoreAction</cstring>
+   </property>
+  </action>
+  <action name="BuyerListAction">
+   <property name="iconText">
+    <string>Buyer List</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>BuyerListAction</cstring>
+   </property>
+  </action>
+  <action name="TruckerReportAction">
+   <property name="iconText">
+    <string>Trucker List</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>TruckerReportAction</cstring>
+   </property>
+  </action>
+  <action name="DetailedSummaryAction">
+   <property name="iconText">
+    <string>Detailed Summary</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>DetailedSummaryAction</cstring>
+   </property>
+  </action>
+  <action name="ImportAction">
+   <property name="iconText">
+    <string>Import Auction 4 Data</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>ImportAction</cstring>
+   </property>
+  </action>
+  <action name="Action">
+   <property name="iconText">
+    <string>Unnamed</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>Action</cstring>
+   </property>
+  </action>
+  <action name="Action_2">
+   <property name="iconText">
+    <string>Unnamed</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>Action_2</cstring>
+   </property>
+  </action>
+  <action name="TransferCheckAction">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Transfer Checks</string>
+   </property>
+   <property name="iconText">
+    <string>Transfer Checks</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>TransferCheckAction</cstring>
+   </property>
+  </action>
+  <action name="startHistoryAction">
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="iconText">
+    <string>Start History</string>
+   </property>
+   <property name="shortcut">
+    <string>H</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>startHistoryAction</cstring>
+   </property>
+  </action>
+  <action name="BrandEditAction">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="iconText">
+    <string>Edit Brands</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>BrandEditAction</cstring>
+   </property>
+  </action>
+  <action name="RepairAction">
+   <property name="iconText">
+    <string>Repair Database</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>RepairAction</cstring>
+   </property>
+  </action>
+  <action name="BrowseTagsAction">
+   <property name="iconText">
+    <string>Browse Tags</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>BrowseTagsAction</cstring>
+   </property>
+  </action>
+  <action name="BuyerCountAction">
+   <property name="iconText">
+    <string>Buyer Count</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>BuyerCountAction</cstring>
+   </property>
+  </action>
+  <action name="VetDialogAction">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="iconText">
+    <string>Vet Insp. Manager</string>
+   </property>
+   <property name="name" stdset="0">
+    <cstring>VetDialogAction</cstring>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/Vera.ttf</file>
+        <file>fonts/VeraBd.ttf</file>
+        <file>fonts/VeraBI.ttf</file>
+        <file>fonts/VeraIt.ttf</file>
+        <file>fonts/VeraMoBd.ttf</file>
+        <file>fonts/VeraMoBI.ttf</file>
+        <file>fonts/VeraMoIt.ttf</file>
+        <file>fonts/VeraMono.ttf</file>
+        <file>fonts/VeraSe.ttf</file>
+        <file>fonts/VeraSeBd.ttf</file>
+    </qresource>
+</RCC>

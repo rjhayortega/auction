@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PrinterSetupDialog</class>
+ <widget class="QDialog" name="PrinterSetupDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>425</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>13</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Setup Printers</string>
+  </property>
+  <widget class="QPushButton" name="refreshButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>500</y>
+     <width>180</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh Printer &amp;List</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>500</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>500</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>C&amp;ancel</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CondensedFontCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>460</y>
+     <width>330</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Print ever&amp;ything in condensed font.</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Y</string>
+   </property>
+  </widget>
+  <widget class="Q3Table" name="defaultPrinterTable">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>400</width>
+     <height>160</height>
+    </rect>
+   </property>
+   <property name="numRows" stdset="0">
+    <number>6</number>
+   </property>
+   <property name="numCols" stdset="0">
+    <number>2</number>
+   </property>
+   <row>
+    <property name="text">
+     <string>Server </string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Station 1</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Station 2</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Station 3</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Station 4</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Station 5</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>Station Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Default Printer</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="Q3Table" name="printerMapTable">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>270</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="numRows" stdset="0">
+    <number>10</number>
+   </property>
+   <property name="numCols" stdset="0">
+    <number>2</number>
+   </property>
+   <row>
+    <property name="text">
+     <string>Seller Invoice</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Buyer Invoice</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Check</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Reports</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Ticket</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Scale</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Check In</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Check In Office</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Loadout</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Second copy</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>Station</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>Q3Frame</class>
+   <extends>QFrame</extends>
+   <header>Qt3Support/Q3Frame</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3Table</class>
+   <extends>Q3Frame</extends>
+   <header>q3table.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <includes>
+  <include location="local">dao/printerdao.h</include>
+  <include location="global">q3process.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>

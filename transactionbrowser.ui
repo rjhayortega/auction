@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TransactionBrowser</class>
+ <widget class="QDialog" name="TransactionBrowser">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>432</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>13</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Transaction Browser</string>
+  </property>
+  <widget class="QLabel" name="textLabel1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>848</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Double click a transaction to edit it:</string>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="textLabel1_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>110</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Index By:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="searchEdit">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>40</y>
+     <width>110</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="searchButton">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>40</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="printTransactionButton">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>390</y>
+     <width>110</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Print List</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttRefresh">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>390</y>
+     <width>110</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="Q3Table" name="transactionTable">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>980</width>
+     <height>280</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="resizePolicy">
+    <enum>Q3ScrollView::Manual</enum>
+   </property>
+   <property name="vScrollBarMode">
+    <enum>Q3ScrollView::AlwaysOn</enum>
+   </property>
+   <property name="numRows">
+    <number>0</number>
+   </property>
+   <property name="numCols">
+    <number>10</number>
+   </property>
+   <property name="sorting">
+    <bool>false</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>Q3Table::SingleRow</enum>
+   </property>
+   <property name="focusStyle">
+    <enum>Q3Table::FollowStyle</enum>
+   </property>
+   <column>
+    <property name="text">
+     <string>Number</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Seller #</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Buyer #</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Head</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Tot Wt.</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Avg Wt.</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Description</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Bid Price</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Amount</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Pen</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QComboBox" name="indexCombo">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>40</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Trans#</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Seller#</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Buyer#</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Head</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Total Weight</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Average Weight</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Description</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Price</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Amount</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pen</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="buttNew">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>390</y>
+     <width>110</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttDelete">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>390</y>
+     <width>110</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttDone">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>390</y>
+     <width>110</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Done</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>Q3Frame</class>
+   <extends>QFrame</extends>
+   <header>Qt3Support/Q3Frame</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3Table</class>
+   <extends>Q3Frame</extends>
+   <header>q3table.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>transactionTable</tabstop>
+  <tabstop>buttDone</tabstop>
+  <tabstop>buttDelete</tabstop>
+  <tabstop>buttNew</tabstop>
+  <tabstop>printTransactionButton</tabstop>
+  <tabstop>buttRefresh</tabstop>
+ </tabstops>
+ <includes>
+  <include location="local">types/transaction.h</include>
+  <include location="local">dao/setupdao.h</include>
+  <include location="local">dao/salemanager.h</include>
+  <include location="local">dao/transactiondao.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>
